@@ -1,0 +1,8 @@
+O(n^2)
+O(n^2)
+O(n^2)
+
+/* Selection sort: goes through the whole array 
+to find the smallest number, no matter what.
+So its time complexity is the same in the best,
+average, and worst cases */
