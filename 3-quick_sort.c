@@ -4,6 +4,8 @@
  * swap_ints - Swaps two integers
  * @a: First integer.
  * @b: Second integer.
+ * @array: Array of integers.
+ * @size: Size of the array.
  */
 void swap_ints(int *a, int *b, int *array, size_t size)
 {
