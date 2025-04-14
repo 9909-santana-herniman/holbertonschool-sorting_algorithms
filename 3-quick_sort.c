@@ -5,13 +5,14 @@
  * @a: First integer.
  * @b: Second integer.
  */
-void swap_ints(int *a, int *b)
+void swap_ints(int *a, int *b, int *array, size_t size)
 {
 	if (*a != *b)
 	{
 		int temp = *a;
 		*a = *b;
 		*b = temp;
+		print_array(array, size);
 	}
 }
 
@@ -35,16 +36,14 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 		{
 			if (i != j)
 			{
-				swap_ints(&array[i], &array[j]);
-				print_array(array, size);
+				swap_ints(&array[i], &array[j], array, size);
 			}
 			i++;
 		}
 	}
 	if (i != high)
 	{
-		swap_ints(&array[i], &array[high]);
-		print_array(array, size);
+		swap_ints(&array[i], &array[high], array, size);
 	}
 	return (i);
 }
